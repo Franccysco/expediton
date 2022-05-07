@@ -1,0 +1,22 @@
+<!-- Modal para aviso qdo despachar pedidos -->
+<div class="modal modal-default fade" id="despacha-pedidos">
+    <div class="modal-dialog" style="top: 20%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4>Expedir Pedido  <i class="fa fa-warning"></i></h4>
+            </div>
+            <div class="modal-body">
+                <p>Pedido sendo expedido!!! <br>A ação irá expedir o pedido do palete<br>Para desfazer ação procure o Administrador do sistema!</p>
+            </div>
+            <div class="modal-footer">
+                <a id="confirm-remover" class="btn btn-danger" href="#">Sim</a>
+                <a id="cancel" class="btn btn-default" data-dismiss="modal">Cancelar</a>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
