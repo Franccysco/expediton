@@ -94,7 +94,12 @@
                                 </option>
                                 <?php endforeach;?>
                               </select>
-                              <span class="input-group-btn" style="top: 13px; right: -9px;">
+                              <div class="checkbox">
+                                <label>
+                                  <input name="buscaInterna" type="checkbox"  value="buscar"> Busca interna via API
+                                </label>
+                              </div>
+                              <span class="input-group-btn" style="top: -8px; right: -9px;">
                                 <button type="submit" class="btn btn-success btn-flat"> <i class="fa fa-file-text"></i> Emitir Relatório</button>
                               </span>
                             </div>

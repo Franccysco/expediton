@@ -70,11 +70,13 @@ class Relatorio extends MY_Controller
     public function pedidosRota()
     {
         $dados['rotas'] = $this->palete_model->rotas();
-       
+        
         $rota = $this->input->post('rota');
-
-        //$rota = array('rota' => $nome);
-
+        $buscaInterna = $this->input->post('buscaInterna');
+        if ($buscaInterna) {
+            print_r($_POST);
+            var_dump($this->input->post()); die;
+        }
         $dados['rota_input'] = $rota;
         $dados['pedidos_rota'] = $this->pedido_model->pedidoRotaRelatorio($rota);
         $dados['titulo'] = 'Relatórios - Pedidos por Rota';
