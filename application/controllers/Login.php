@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Login extends CI_Controller
+class Login extends MY_Controller
 {
 
     public function index()
@@ -9,6 +9,8 @@ class Login extends CI_Controller
 
         //Dados a serem enviados para o cabeçalho
         $dados['titulo'] = 'Login';
+
+        $dados['mostrar_campos'] = ($this->verificar_pagamento());
 
         $this->form_validation->set_rules('identity', 'Login', 'required');
         $this->form_validation->set_rules('password', 'Senha', 'required');

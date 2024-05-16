@@ -46,50 +46,56 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Entre para iniciar sua sessão</p>
+    <?php if ($mostrar_campos): ?>
+      <p class="login-box-msg">Entre para iniciar sua sessão</p>
 
-    <?php if ($this->session->flashdata('error') == true): ?>
-      <div class="alert alert-danger alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><i class="icon fa fa-times-circle"></i> Erros</h4>
-        <?php echo $this->session->flashdata('error'); ?>
-      </div>
-      <?php endif;?>
+      <?php if ($this->session->flashdata('error') == true): ?>
+        <div class="alert alert-danger alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h4><i class="icon fa fa-times-circle"></i> Erros</h4>
+          <?php echo $this->session->flashdata('error'); ?>
+        </div>
+        <?php endif;?>
 
-      <?php if ($this->session->flashdata('success') == true): ?>
-      <div class="alert alert-success alert-dismissible">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><i class="icon fa fa-check-circle"></i> Sucesso</h4>
-        <?php echo $this->session->flashdata('success'); ?>
-      </div>
-      <?php endif;?>
+        <?php if ($this->session->flashdata('success') == true): ?>
+        <div class="alert alert-success alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h4><i class="icon fa fa-check-circle"></i> Sucesso</h4>
+          <?php echo $this->session->flashdata('success'); ?>
+        </div>
+        <?php endif;?>
 
-
-    <form action="<?=base_url('login')?>" method="post">
-      <div class="form-group has-feedback">
-        <input type="text" name="identity" class="form-control" placeholder="Login" autofocus>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" name="password" class="form-control" placeholder="Senha">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input name="remember" FALSE value="1" type="checkbox"> Lembrar-me
-            </label>
+   
+      <form action="<?=base_url('login')?>" method="post">
+        <div class="form-group has-feedback">
+          <input type="text" name="identity" class="form-control" placeholder="Login" autofocus>
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" name="password" class="form-control" placeholder="Senha">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="checkbox icheck">
+              <label>
+                <input name="remember" FALSE value="1" type="checkbox"> Lembrar-me
+              </label>
+            </div>
           </div>
+          <!-- /.col -->
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
+          </div>
+          <!-- /.col -->
         </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Entrar</button>
-        </div>
-        <!-- /.col -->
+      </form>
+    <?php else:?>
+      <div class="alert alert-danger alert-dismissible">
+          <h4><i class="icon fa fa-times-circle"></i> Erros</h4>
+          Sua assinatura não foi renovada. Por favor, entre em contato com o administrador do sistema.
       </div>
-    </form>
-
+    <?php endif;?>
    
 
     <!-- <a href="#">Esqueceu a senha?</a><br> -->
