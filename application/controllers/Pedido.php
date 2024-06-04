@@ -308,21 +308,21 @@ class Pedido extends MY_Controller
         // determina as regras de validação
         switch ($operacao) {
             case 'insert':
-                $rules['cod_pedido'] = array('trim', 'required', 'min_length[3]');
+                $rules['cod_pedido'] = array('trim', 'required', 'min_length[1]');
                 // $rules['rota_id'] = array('trim', 'required');
                 // $rules['palete_id'] = array('trim', 'required');
                 // $rules['cliente_id'] = array('trim', 'required');
                 break;
 
             case 'update':
-                $rules['cod_pedido'] = array('trim', 'required', 'min_length[3]');
+                $rules['cod_pedido'] = array('trim', 'required', 'min_length[1]');
                 //$rules['rota_id'] = array('trim', 'required');
                 // $rules['palete_id'] = array('trim', 'required');
                 //$rules['cliente_id'] = array('trim', 'required');
                 break;
 
             default:
-                $rules['cod_pedido'] = array('trim', 'required', 'min_length[3]');
+                $rules['cod_pedido'] = array('trim', 'required', 'min_length[1]');
                 //$rules['rota_id'] = array('trim', 'required');
                 // $rules['palete_id'] = array('trim', 'required');
                 //$rules['cliente_id'] = array('trim', 'required');
