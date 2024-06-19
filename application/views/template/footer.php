@@ -4,7 +4,7 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="#">Impacta Designer e Soluções Tecnológicas</a>.</strong>
+    <strong>Copyright &copy; 2018 <a href="#">F&H</a>.</strong>
     Todos
     os Direitos Reservados.
 </footer>
